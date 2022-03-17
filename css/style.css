@@ -1,10 +1,28 @@
 :root {
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
+
+    --neutral-dark: #000500;
+    --neutral-light: #f7f7ff;
+    --primary-wrong: #d7263d;
+    --primary-right: #399e5a;
+    --primary-maybe: #e5f77d;
+
+    --alternate-primary-right: #f56960;
+    --alternate-neutral-light: #e0e0e0;
 }
 
-.body {
+.neutral-button {
+    border-radius: 9px;
+    background: #e0e0e0;
+    box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+}
+
+body {
     height: 100vh;
+    background-color: var(--alternate-neutral-light);
+    color: var(--neutral-dark);
+    font-weight: 800;
 }
 
 .header {
@@ -55,4 +73,24 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.keyboard-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    width: 3.5%;
+    height: 1.75rem;
+    text-align: center;
+    padding: 0.5rem;
+    /* background-color: hotpink; */
+}
+
+#DEL {
+    width: 6%;
+}
+
+#ENTER {
+    width: 9%;
 }
