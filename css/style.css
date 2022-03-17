@@ -3,11 +3,56 @@
     font-family: "Nunito", sans-serif;
 }
 
+.body {
+    height: 100vh;
+}
+
 .header {
+    height: 3.25rem;
     display: flex;
 }
 
 .header-title {
     text-align: center;
+    margin: 1rem 0;
+
+    justify-content: space-around;
+}
+
+.game {
+    height: calc(100vh - 5.25rem);
+}
+
+.board-container {
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.board {
+    height: 100%;
+    aspect-ratio: 0.833;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+.game-tile {
+    background-color: rebeccapurple;
+}
+
+.keyboard {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+}
+
+.row {
+    display: flex;
+    align-items: center;
     justify-content: space-around;
 }
