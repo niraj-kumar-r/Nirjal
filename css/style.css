@@ -12,30 +12,6 @@
     --alternate-neutral-light: #e0e0e0;
 }
 
-.neutral-button {
-    border-radius: 9px;
-    background: #e0e0e0;
-    box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
-}
-
-.wrong-button {
-    border-radius: 9px;
-    background: #d7263d;
-    box-shadow: 3px 3px 6px #b72034, -3px -3px 6px #f72c46;
-}
-
-.right-button {
-    border-radius: 9px;
-    background: #399e5a;
-    box-shadow: 3px 3px 6px #30864d, -3px -3px 6px #42b668;
-}
-
-.maybe-button {
-    border-radius: 9px;
-    background: #e5f77d;
-    box-shadow: 3px 3px 6px #c3d26a, -3px -3px 6px #ffff90;
-}
-
 body {
     height: 100vh;
     background-color: var(--alternate-neutral-light);
@@ -108,4 +84,28 @@ body {
 
 #ENTER {
     width: 9%;
+}
+
+.neutral-button {
+    border-radius: 9px;
+    background: #e0e0e0;
+    box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+}
+
+.wrong-button {
+    border-radius: 9px;
+    background: #d7263d;
+    box-shadow: 3px 3px 6px #b72034, -3px -3px 6px #f72c46;
+}
+
+.right-button {
+    border-radius: 9px;
+    background: #399e5a;
+    box-shadow: 3px 3px 6px #30864d, -3px -3px 6px #42b668;
+}
+
+.maybe-button {
+    border-radius: 9px;
+    background: #e5f77d;
+    box-shadow: 3px 3px 6px #c3d26a, -3px -3px 6px #ffff90;
 }
