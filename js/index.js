@@ -1,5 +1,6 @@
 const keyboardRows = document.querySelector(".row");
-
+import { answerObject, answerArray, eligibleObject } from "/js/array.js";
+console.log(answerObject);
 class Board {
     constructor() {
         this._boardArray = 1;
@@ -12,5 +13,4 @@ class Board {
 
 let board = new Board();
 
-console.log(board.array);
 // keyboardRows.addEventListener("click", board.addKeyPress);
