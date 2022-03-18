@@ -84,6 +84,7 @@ class Board {
                 gameTile.classList.remove("neutral-button");
                 gameTile.classList.add("right-button");
                 keyboardTile.classList.remove("neutral-button");
+                keyboardTile.classList.remove("maybe-button");
                 keyboardTile.classList.add("right-button");
             } else if (resultState === 0) {
                 gameTile.classList.remove("neutral-button");
