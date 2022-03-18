@@ -125,15 +125,6 @@ body {
     box-shadow: 3px 3px 6px #c85048, -3px -3px 6px #ff6c62;
 }
 
-.right-button {
-    /* border-radius: 9px;
-    background: #399e5a;
-    box-shadow: 3px 3px 6px #30864d, -3px -3px 6px #42b668; */
-    border-radius: 9px;
-    background: #a9ffcd;
-    box-shadow: 3px 3px 6px #90d9ae, -3px -3px 6px #c2ffec;
-}
-
 .maybe-button {
     /* border-radius: 9px;
     background: #e5f77d;
@@ -141,4 +132,13 @@ body {
     border-radius: 9px;
     background: #fcf5c7;
     box-shadow: 3px 3px 6px #d6d0a9, -3px -3px 6px #ffffe5;
+}
+
+.right-button {
+    /* border-radius: 9px;
+    background: #399e5a;
+    box-shadow: 3px 3px 6px #30864d, -3px -3px 6px #42b668; */
+    border-radius: 9px;
+    background: #a9ffcd;
+    box-shadow: 3px 3px 6px #90d9ae, -3px -3px 6px #c2ffec;
 }
