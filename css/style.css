@@ -33,6 +33,7 @@ body {
 
 .game {
     height: calc(100vh - 5.25rem);
+    position: relative;
 }
 
 .board-container {
@@ -90,6 +91,18 @@ body {
 
 #ENTER {
     width: 9%;
+}
+
+.end-scrren {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    background-color: var(--neutral-dark);
+    color: var(--alternate-neutral-light);
+    border-radius: 2rem;
+    padding: 2rem;
 }
 
 .neutral-button {
