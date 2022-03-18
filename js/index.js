@@ -15,7 +15,7 @@ class Board {
 
         this.matchWord = () => {
             console.log(randomWord, this.currentWord);
-            let checkFreqArray = this.currentWord.split("");
+            // let checkFreqArray = this.currentWord.split("");
 
             return randomWord.split("").map((actualLetter, index) => {
                 if (actualLetter === this.currentWord[index]) {
@@ -57,7 +57,6 @@ class Board {
             (eligibleObject[this.currentWord.toLowerCase()] === true ||
                 answerObject[this.currentWord.toLowerCase()] === true)
         ) {
-            this.changeBoardRow(this.matchWord(), this.wordCounter);
             this.boardArray.push(
                 this.matchWord().map((a) => {
                     if (a === 1) {
@@ -69,6 +68,8 @@ class Board {
                     }
                 })
             );
+            this.changeBoardRow(this.matchWord(), this.wordCounter);
+
             this.wordCounter += 1;
             this.currentWord = "";
         } else if (
@@ -104,21 +105,59 @@ class Board {
                     .classList.add("wrong-button");
             }
         });
+        console.log(matchArray);
 
-        if (matchArray === [1, 1, 1, 1, 1]) {
+        if (matchArray.every((a) => a === 1)) {
             this.showResult(1);
             this.disconnectboard();
-        } else if (row === 5 && matchArray !== [1, 1, 1, 1, 1]) {
+        } else if (row === 5 && !matchArray.every((a) => a === 1)) {
             this.showResult(-1);
             this.disconnectboard();
         }
     }
 
     showResult(resultState) {
+        let finalState = board.boardArray.map((a) => a.join(""));
+        console.log(finalState);
         if (resultState === 1) {
-            console.log(this.boardArray);
+            let winMessage = document.createElement("div");
+            winMessage.innerText = "You Win";
+            let endScreen = document.querySelector(".end-screen");
+            endScreen.appendChild(winMessage);
+
+            finalState.forEach((a) => {
+                const b = document.createElement("div");
+                b.innerText = a;
+                endScreen.appendChild(b);
+            });
+
+            endScreen.style.display = "block";
         } else if (resultState === -1) {
+            let loseMessage = document.createElement("div");
+            loseMessage.innerText = "You LOSER😆";
+            let endScreen = document.querySelector(".end-screen");
+            endScreen.appendChild(loseMessage);
+
+            finalState.forEach((a) => {
+                const b = document.createElement("div");
+                b.innerText = a;
+                endScreen.appendChild(b);
+            });
+
+            endScreen.style.display = "block";
         }
+    }
+
+    disconnectboard() {
+        const keyboardButtonArr =
+            document.getElementsByClassName("keyboard-button");
+
+        for (let keyboardButton of keyboardButtonArr) {
+            keyboardButton.removeEventListener("click", keyboardButtonHandler);
+        }
+
+        document.querySelector(".board-container").style.opacity = 0.3;
+        document.querySelector(".keyboard").style.opacity = 0.3;
     }
 }
 
