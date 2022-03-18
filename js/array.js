@@ -12507,6 +12507,7 @@ const eligibleObject = {
     salse: true,
     salto: true,
     salts: true,
+    salty: true,
     salue: true,
     salut: true,
     saman: true,

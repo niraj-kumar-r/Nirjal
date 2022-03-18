@@ -1,4 +1,4 @@
-import { answerArray, eligibleObject } from "/js/array.js";
+import { answerArray, answerObject, eligibleObject } from "/js/array.js";
 
 class Board {
     constructor() {
@@ -11,13 +11,17 @@ class Board {
 
         this.matchWord = () => {
             console.log(randomWord, this.currentWord);
-            return randomWord
-                .split("")
-                .map((actualLetter, index) =>
-                    this.currentWord.charAt(index) === actualLetter
-                        ? true
-                        : false
-                );
+            console.log(eligibleObject[this.currentWord.toLowerCase()]);
+
+            return randomWord.split("").map((actualLetter, index) => {
+                if (actualLetter === this.currentWord[index]) {
+                    return 1;
+                } else if (this.currentWord.includes(actualLetter)) {
+                    return 0;
+                } else {
+                    return -1;
+                }
+            });
         };
     }
 
@@ -46,16 +50,47 @@ class Board {
         if (
             this.currentWord.length === 5 &&
             this.wordCounter < 6 &&
-            eligibleObject[this.currentWord] === true
+            (eligibleObject[this.currentWord.toLowerCase()] === true ||
+                answerObject[this.currentWord.toLowerCase()] === true)
         ) {
-            console.log(this.matchWord);
-            changeBoardRow();
+            this.changeBoardRow(this.matchWord(), this.wordCounter);
             this.boardArray.push(this.matchWord());
             this.wordCounter += 1;
+            this.currentWord = "";
+        } else if (
+            eligibleObject[this.currentWord.toLowerCase()] !== true ||
+            answerObject[this.currentWord.toLowerCase()] !== true
+        ) {
+            console.log("Not in word List");
         }
     }
 
-    changeBoardRow() {}
+    changeBoardRow(matchArray, row) {
+        matchArray.forEach((resultState, index) => {
+            if (resultState === 1) {
+                document
+                    .getElementById(`${row}${index}`)
+                    .classList.remove("neutral-button");
+                document
+                    .getElementById(`${row}${index}`)
+                    .classList.add("right-button");
+            } else if (resultState === 0) {
+                document
+                    .getElementById(`${row}${index}`)
+                    .classList.remove("neutral-button");
+                document
+                    .getElementById(`${row}${index}`)
+                    .classList.add("maybe-button");
+            } else if (resultState === -1) {
+                document
+                    .getElementById(`${row}${index}`)
+                    .classList.remove("neutral-button");
+                document
+                    .getElementById(`${row}${index}`)
+                    .classList.add("wrong-button");
+            }
+        });
+    }
 }
 
 const board = new Board();
