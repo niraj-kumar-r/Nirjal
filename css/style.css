@@ -33,6 +33,7 @@ body {
 
 .game {
     height: calc(100vh - 5.25rem);
+    position: relative;
 }
 
 .board-container {
@@ -57,6 +58,8 @@ body {
     aspect-ratio: 1;
 }
 .keyboard {
+    max-width: clamp(23.4rem, 90%, 30rem);
+    margin: auto;
     margin-top: 1rem;
     height: 40%;
     display: flex;
@@ -88,6 +91,21 @@ body {
 
 #ENTER {
     width: 9%;
+}
+
+.end-screen {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    text-align: center;
+    width: clamp(15rem, 60%, 30rem);
+    background-color: var(--neutral-dark);
+    color: var(--alternate-neutral-light);
+    border-radius: 2rem;
+    padding: 2rem;
 }
 
 .neutral-button {
