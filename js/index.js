@@ -10,13 +10,8 @@ class Board {
             answerArray[
                 Math.floor(Math.random() * answerArray.length)
             ].toUpperCase();
-        // let randomWord = "BOAKS";
-        console.log(randomWord, "randomWord");
 
         this.matchWord = () => {
-            console.log(randomWord, this.currentWord);
-            // let checkFreqArray = this.currentWord.split("");
-
             return randomWord.split("").map((actualLetter, index) => {
                 if (actualLetter === this.currentWord[index]) {
                     return 1;
@@ -105,7 +100,6 @@ class Board {
                     .classList.add("wrong-button");
             }
         });
-        console.log(matchArray);
 
         if (matchArray.every((a) => a === 1)) {
             this.showResult(1);
@@ -118,7 +112,6 @@ class Board {
 
     showResult(resultState) {
         let finalState = board.boardArray.map((a) => a.join(""));
-        console.log(finalState);
         if (resultState === 1) {
             let winMessage = document.createElement("div");
             winMessage.innerText = "You Win";
