@@ -14,7 +14,7 @@ class Board {
             return randomWord.split("").map((actualLetter, index) => {
                 if (actualLetter === this.currentWord[index]) {
                     return 1;
-                } else if (this.currentWord.includes(actualLetter)) {
+                } else if (randomWord.includes(this.currentWord[index])) {
                     return 0;
                 } else {
                     return -1;
