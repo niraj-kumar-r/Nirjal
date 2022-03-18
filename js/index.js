@@ -7,11 +7,9 @@ class Board {
         this.wordCounter = 0;
 
         let randomWord = answerArray[272].toUpperCase();
-        console.log(randomWord, "randomWord");
 
         this.matchWord = () => {
             console.log(randomWord, this.currentWord);
-            console.log(eligibleObject[this.currentWord.toLowerCase()]);
 
             return randomWord.split("").map((actualLetter, index) => {
                 if (actualLetter === this.currentWord[index]) {
@@ -66,6 +64,7 @@ class Board {
     }
 
     changeBoardRow(matchArray, row) {
+        console.log(matchArray);
         matchArray.forEach((resultState, index) => {
             if (resultState === 1) {
                 document
@@ -96,7 +95,6 @@ class Board {
 const board = new Board();
 
 const keyboardButtonHandler = (event) => {
-    console.log(event.target.id);
     if (event.target.id !== "ENTER" && event.target.id !== "DEL") {
         board.addLetter(event.target.id);
     } else if (event.target.id === "DEL") {
