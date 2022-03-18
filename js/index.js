@@ -121,6 +121,13 @@ class Board {
                 endScreen.appendChild(b);
             });
 
+            let link = document.createElement("a");
+            link.target = "_blank";
+            link.href = "https://nirdle.netlify.app/";
+            link.innerText = "Play Nirdle";
+            link.style.color = "var(--link-color)";
+            endScreen.appendChild(link);
+
             endScreen.style.display = "block";
         } else if (resultState === -1) {
             let loseMessage = document.createElement("div");
@@ -133,6 +140,13 @@ class Board {
                 b.innerText = a;
                 endScreen.appendChild(b);
             });
+
+            let link = document.createElement("a");
+            link.target = "_blank";
+            link.href = "https://nirdle.netlify.app/";
+            link.innerText = "Play Nirdle";
+            link.style.color = "var(--link-color)";
+            endScreen.appendChild(link);
 
             endScreen.style.display = "block";
         }
