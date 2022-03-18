@@ -1,41 +1,8 @@
-import { answerObject, answerArray, eligibleObject } from "/js/array.js";
+import { answerArray, eligibleObject } from "/js/array.js";
 
 class Board {
     constructor() {
-        this.boardArray = [
-            ["", "", "", "", ""],
-            ["", "", "", "", ""],
-            ["", "", "", "", ""],
-            ["", "", "", "", ""],
-            ["", "", "", "", ""],
-            ["", "", "", "", ""],
-        ];
-        this.row = 0;
-        this.col = 0;
-    }
-
-    goAhead() {
-        if (this.col < 4) {
-            this.col += 1;
-        }
-    }
-
-    goBack() {
-        if (this.col > 0) {
-            this.col -= 1;
-        }
-    }
-
-    addLetter(key) {
-        this.boardArray[this.row][this.col] = key;
-        document.getElementById(`${this.row}${this.col}`).textContent = key;
-        this.goAhead();
-    }
-
-    removeLetter() {
-        this.boardArray[this.row][this.col] = "";
-        document.getElementById(`${this.row}${this.col}`).textContent = null;
-        this.goBack();
+        this.boardArray = ["", "", "", "", ""];
     }
 }
 
