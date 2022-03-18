@@ -10,7 +10,7 @@ class Board {
             answerArray[
                 Math.floor(Math.random() * answerArray.length)
             ].toUpperCase();
-        console.log(randomWord);
+        // console.log(randomWord);
 
         this.matchWord = () => {
             return randomWord.split("").map((actualLetter, index) => {
