@@ -93,7 +93,8 @@ body {
     width: 9%;
 }
 
-.end-scrren {
+.end-screen {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -68,7 +68,6 @@ class Board {
     }
 
     changeBoardRow(matchArray, row) {
-        console.log(matchArray);
         matchArray.forEach((resultState, index) => {
             if (resultState === 1) {
                 document
@@ -93,6 +92,19 @@ class Board {
                     .classList.add("wrong-button");
             }
         });
+
+        if (matchArray === [1, 1, 1, 1, 1]) {
+            this.showResult(1);
+            this.disconnectboard();
+        } else if (row === 5 && matchArray !== [1, 1, 1, 1, 1]) {
+            this.showResult(-1);
+            this.disconnectboard();
+        }
+    }
+
+    showResult(resultState) {
+        if (resultState === 1) {
+        }
     }
 }
 
