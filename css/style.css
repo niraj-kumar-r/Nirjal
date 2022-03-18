@@ -4,12 +4,12 @@
 
     --neutral-dark: #000500;
     --neutral-light: #f7f7ff;
-    --primary-wrong: #d7263d;
-    --primary-right: #399e5a;
-    --primary-maybe: #e5f77d;
+    --primary-wrong: #eb5e55;
+    --primary-right: #a9ffcb;
+    --primary-maybe: #fcf5c7;
 
-    --alternate-primary-right: #f56960;
     --alternate-neutral-light: #e0e0e0;
+    --link-color: #f694c1;
 }
 
 body {
@@ -115,19 +115,29 @@ body {
 }
 
 .wrong-button {
-    border-radius: 9px;
+    /* border-radius: 9px;
     background: #d7263d;
-    box-shadow: 3px 3px 6px #b72034, -3px -3px 6px #f72c46;
+    box-shadow: 3px 3px 6px #b72034, -3px -3px 6px #f72c46; */
+
+    border-radius: 9px;
+    background: #eb5e55;
+    box-shadow: 3px 3px 6px #c85048, -3px -3px 6px #ff6c62;
 }
 
 .right-button {
-    border-radius: 9px;
+    /* border-radius: 9px;
     background: #399e5a;
-    box-shadow: 3px 3px 6px #30864d, -3px -3px 6px #42b668;
+    box-shadow: 3px 3px 6px #30864d, -3px -3px 6px #42b668; */
+    border-radius: 9px;
+    background: #a9ffcd;
+    box-shadow: 3px 3px 6px #90d9ae, -3px -3px 6px #c2ffec;
 }
 
 .maybe-button {
-    border-radius: 9px;
+    /* border-radius: 9px;
     background: #e5f77d;
-    box-shadow: 3px 3px 6px #c3d26a, -3px -3px 6px #ffff90;
+    box-shadow: 3px 3px 6px #c3d26a, -3px -3px 6px #ffff90; */
+    border-radius: 9px;
+    background: #fcf5c7;
+    box-shadow: 3px 3px 6px #d6d0a9, -3px -3px 6px #ffffe5;
 }
