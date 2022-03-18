@@ -10,6 +10,7 @@ class Board {
             answerArray[
                 Math.floor(Math.random() * answerArray.length)
             ].toUpperCase();
+        console.log(randomWord);
 
         this.matchWord = () => {
             return randomWord.split("").map((actualLetter, index) => {
@@ -77,27 +78,23 @@ class Board {
 
     changeBoardRow(matchArray, row) {
         matchArray.forEach((resultState, index) => {
+            let gameTile = document.getElementById(`${row}${index}`);
+            let keyboardTile = document.getElementById(gameTile.textContent);
             if (resultState === 1) {
-                document
-                    .getElementById(`${row}${index}`)
-                    .classList.remove("neutral-button");
-                document
-                    .getElementById(`${row}${index}`)
-                    .classList.add("right-button");
+                gameTile.classList.remove("neutral-button");
+                gameTile.classList.add("right-button");
+                keyboardTile.classList.remove("neutral-button");
+                keyboardTile.classList.add("right-button");
             } else if (resultState === 0) {
-                document
-                    .getElementById(`${row}${index}`)
-                    .classList.remove("neutral-button");
-                document
-                    .getElementById(`${row}${index}`)
-                    .classList.add("maybe-button");
+                gameTile.classList.remove("neutral-button");
+                gameTile.classList.add("maybe-button");
+                keyboardTile.classList.remove("neutral-button");
+                keyboardTile.classList.add("maybe-button");
             } else if (resultState === -1) {
-                document
-                    .getElementById(`${row}${index}`)
-                    .classList.remove("neutral-button");
-                document
-                    .getElementById(`${row}${index}`)
-                    .classList.add("wrong-button");
+                gameTile.classList.remove("neutral-button");
+                gameTile.classList.add("wrong-button");
+                keyboardTile.classList.remove("neutral-button");
+                keyboardTile.classList.add("wrong-button");
             }
         });
 
