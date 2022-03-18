@@ -10,10 +10,12 @@ class Board {
             answerArray[
                 Math.floor(Math.random() * answerArray.length)
             ].toUpperCase();
+        // let randomWord = "BOAKS";
         console.log(randomWord, "randomWord");
 
         this.matchWord = () => {
             console.log(randomWord, this.currentWord);
+            let checkFreqArray = this.currentWord.split("");
 
             return randomWord.split("").map((actualLetter, index) => {
                 if (actualLetter === this.currentWord[index]) {
@@ -56,7 +58,17 @@ class Board {
                 answerObject[this.currentWord.toLowerCase()] === true)
         ) {
             this.changeBoardRow(this.matchWord(), this.wordCounter);
-            this.boardArray.push(this.matchWord());
+            this.boardArray.push(
+                this.matchWord().map((a) => {
+                    if (a === 1) {
+                        return "🟩";
+                    } else if (a === 0) {
+                        return "🟨";
+                    } else if (a === -1) {
+                        return "🟥";
+                    }
+                })
+            );
             this.wordCounter += 1;
             this.currentWord = "";
         } else if (
@@ -104,6 +116,8 @@ class Board {
 
     showResult(resultState) {
         if (resultState === 1) {
+            console.log(this.boardArray);
+        } else if (resultState === -1) {
         }
     }
 }
