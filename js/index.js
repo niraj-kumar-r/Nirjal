@@ -6,7 +6,11 @@ class Board {
         this.currentWord = "";
         this.wordCounter = 0;
 
-        let randomWord = answerArray[272].toUpperCase();
+        let randomWord =
+            answerArray[
+                Math.floor(Math.random() * answerArray.length)
+            ].toUpperCase();
+        console.log(randomWord, "randomWord");
 
         this.matchWord = () => {
             console.log(randomWord, this.currentWord);
