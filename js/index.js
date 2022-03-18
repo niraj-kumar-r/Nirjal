@@ -43,7 +43,11 @@ class Board {
     }
 
     processWord() {
-        if (this.currentWord.length === 5 && this.wordCounter < 6) {
+        if (
+            this.currentWord.length === 5 &&
+            this.wordCounter < 6 &&
+            eligibleObject[this.currentWord] === true
+        ) {
             console.log(this.matchWord);
             changeBoardRow();
             this.boardArray.push(this.matchWord());
