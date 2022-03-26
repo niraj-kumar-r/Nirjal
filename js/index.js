@@ -10,7 +10,7 @@ class Board {
             answerArray[
                 Math.floor(Math.random() * answerArray.length)
             ].toUpperCase();
-        // console.log(randomWord);
+        console.log(randomWord);
 
         this.matchWord = () => {
             return randomWord.split("").map((actualLetter, index) => {
@@ -122,7 +122,7 @@ class Board {
                 endScreen.appendChild(b);
             });
 
-            this.playAgain();
+            this.addButton(endScreen, "Play Again");
         } else if (resultState === -1) {
             let loseMessage = document.createElement("div");
             loseMessage.innerText = "You LOSER😆";
@@ -135,18 +135,23 @@ class Board {
                 endScreen.appendChild(b);
             });
 
-            this.playAgain();
+            this.addButton(endScreen, "Play Again");
         }
     }
 
-    playAgain() {
-        let link = document.createElement("a");
-        link.href = "https://nirdle.netlify.app/";
-        link.innerText = "Play Again";
-        link.style.color = "var(--link-color)";
-        endScreen.appendChild(link);
+    addButton(screen, say) {
+        let button = document.createElement("button");
+        // link.href = "https://nirdle.netlify.app/";
+        // link.innerText = "Play Again";
+        // link.style.color = "var(--link-color)";
+        button.innerText = say;
+        button.addEventListener("click", () => {
+            window.location.reload();
+        });
+        button.classList.add("screen-button");
+        screen.appendChild(button);
 
-        endScreen.style.display = "block";
+        screen.style.display = "block";
     }
 
     disconnectboard() {

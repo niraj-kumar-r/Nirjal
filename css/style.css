@@ -117,6 +117,16 @@ header {
     padding: 2rem;
 }
 
+.screen-button {
+    font: inherit;
+    size: inherit;
+    color: var(--link-color);
+    margin-top: 0.5rem;
+    background-color: transparent;
+    border: solid 0rem var(--alternate-neutral-light);
+    border-radius: 0.75rem;
+}
+
 .neutral-button {
     border-radius: 9px;
     background: #e0e0e0;
