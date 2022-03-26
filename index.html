@@ -33,12 +33,43 @@
     <body>
         <header>
             <img src="assets/helpIcon.svg" alt="Help" class="help" />
+            <div class="help-menu">
+                <h2>How To Play</h2>
+                <p>Guess the NIRDLE in six tries.</p>
+
+                <p>
+                    Each guess must be a valid five-letter word. Hit the enter
+                    button to submit.
+                </p>
+
+                <p>
+                    After each guess, the color of the tiles will change to show
+                    how close your guess was to the word.
+                </p>
+
+                <div class="help-menu-button-grid">
+                    <p class="right-button">W</p>
+
+                    <p>The letter W is in the word and in the correct spot.</p>
+
+                    <p class="maybe-button">I</p>
+
+                    <p>The letter I is in the word but in the wrong spot.</p>
+
+                    <p class="wrong-button">U</p>
+
+                    <p>The letter U is not in the word in any spot.</p>
+                </div>
+            </div>
             <h1 class="header-title">NIRDLE</h1>
             <img
                 src="assets/settingsIcon.svg"
                 alt="settings"
                 class="settings"
             />
+            <div class="settings-menu display-none">
+                <h2>Settings</h2>
+            </div>
         </header>
         <main class="game">
             <div class="board-container">

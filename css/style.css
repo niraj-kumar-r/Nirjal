@@ -18,6 +18,7 @@ body {
     background-color: var(--alternate-neutral-light);
     color: var(--neutral-dark);
     font-weight: 800;
+    position: relative;
 }
 
 header {
@@ -37,6 +38,35 @@ header {
 .settings {
     height: 1.5rem;
     margin: 1rem;
+}
+
+.help-menu,
+.settings-menu {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: clamp(20rem, 80%, 30rem);
+
+    background-color: var(--neutral-dark);
+    color: var(--neutral-light);
+    padding: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.help-menu-button-grid {
+    display: grid;
+    grid-template-columns: 3rem auto;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
 }
 
 .game {
