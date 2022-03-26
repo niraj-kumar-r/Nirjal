@@ -13,22 +13,30 @@
 }
 
 body {
-    height: 100vh;
+    max-height: 100%;
+    margin: 0;
     background-color: var(--alternate-neutral-light);
     color: var(--neutral-dark);
     font-weight: 800;
 }
 
-.header {
+header {
     height: 3.25rem;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-title {
     text-align: center;
     margin: 1rem 0;
+}
 
-    justify-content: space-around;
+.help,
+.settings {
+    height: 1.5rem;
+    margin: 1rem;
 }
 
 .game {
