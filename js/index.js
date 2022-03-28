@@ -165,22 +165,26 @@ class Board {
         document.querySelector(".board-container").style.opacity = 0.3;
         document.querySelector(".keyboard").style.opacity = 0.3;
     }
+
+    connectboard() {
+        const keyboardButtonHandler = (event) => {
+            if (event.target.id !== "ENTER" && event.target.id !== "DEL") {
+                board.addLetter(event.target.id);
+            } else if (event.target.id === "DEL") {
+                board.removeLetter();
+            } else if (event.target.id === "ENTER") {
+                board.processWord();
+            }
+        };
+
+        const keyboardButtonArray =
+            document.getElementsByClassName("keyboard-button");
+
+        for (let keyboardButton of keyboardButtonArray) {
+            keyboardButton.addEventListener("click", keyboardButtonHandler);
+        }
+    }
 }
 
 const board = new Board();
-
-const keyboardButtonHandler = (event) => {
-    if (event.target.id !== "ENTER" && event.target.id !== "DEL") {
-        board.addLetter(event.target.id);
-    } else if (event.target.id === "DEL") {
-        board.removeLetter();
-    } else if (event.target.id === "ENTER") {
-        board.processWord();
-    }
-};
-
-const keyboardButtonArray = document.getElementsByClassName("keyboard-button");
-
-for (let keyboardButton of keyboardButtonArray) {
-    keyboardButton.addEventListener("click", keyboardButtonHandler);
-}
+board.connectboard();
