@@ -89,6 +89,18 @@ header {
     align-self: center;
 }
 
+.social-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    height: 1.25rem;
+    color: var(--alternate-neutral-light);
+    margin: 0.5rem;
+}
+
 .display-none {
     display: none;
 }
