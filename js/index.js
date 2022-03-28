@@ -215,3 +215,9 @@ addOpeningAndClosingButton(
     document.getElementsByClassName("help")[0],
     document.getElementsByClassName("help-menu-heading-cross")[0]
 );
+
+addOpeningAndClosingButton(
+    document.getElementsByClassName("settings-menu")[0],
+    document.getElementsByClassName("settings")[0],
+    document.getElementsByClassName("settings-menu-heading-cross")[0]
+);
