@@ -56,6 +56,21 @@ header {
     text-align: center;
 }
 
+.help-menu-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.help-menu-heading-cross {
+    /* color: blue; */
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
 .help-menu-button-grid {
     display: grid;
     grid-template-columns: 3rem auto;
