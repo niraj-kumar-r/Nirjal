@@ -56,13 +56,14 @@ header {
     text-align: center;
 }
 
-.help-menu-heading {
+.menu-heading {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.help-menu-heading-cross {
+.help-menu-heading-cross,
+.settings-menu-heading-cross {
     /* color: blue; */
     width: 10%;
     position: absolute;
