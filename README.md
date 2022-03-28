@@ -1,4 +1,4 @@
-# NIRJAL - My Wordle Clone and Maybe More😉
+# NIRDLE - My Wordle Clone and Maybe More😉
 
 ## Author
 
